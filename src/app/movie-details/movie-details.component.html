@@ -1,6 +1,21 @@
 <div class="movie-details">
+    <figure class="movie-details-card">
+        <img class="movie-details-img movie-img" src="../../assets/images/movie-covers/{{movie.img}}" alt="movie">
 
-
-
-    <h1>{{movie.name}}</h1>
+    </figure>
+    <div class=" movie-details-info">
+        <h1 style="color: white; margin-top:100px;">{{movie.name}}</h1>
+        <p>
+            {{movie.description}}
+        </p>
+        <p>
+            {{movie.genres}}
+        </p>
+        <p>
+            {{movie.rate}}
+        </p>
+        <p>
+            {{movie.length}}
+        </p>
+    </div>
 </div>
