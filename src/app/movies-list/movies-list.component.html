@@ -6,17 +6,13 @@
 
         <div *ngFor="let movie of movies" class="container">
             <a routerLink="/movies/{{movie.id}}">
-
                 <figure class="movie-card">
                     <img class="movie-img" src="../../assets/images/movie-covers/{{movie.img}}" alt="movie">
-
                 </figure>
-
-
             </a>
+
             <a class="movie-label" routerLink="/movies/{{movie.id}}">
                 <caption>
-
                     {{movie.name}}
                 </caption>
             </a>

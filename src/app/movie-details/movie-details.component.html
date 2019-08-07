@@ -1,21 +1,26 @@
 <div class="movie-details">
-    <figure class="movie-details-card">
-        <img class="movie-details-img movie-img" src="../../assets/images/movie-covers/{{movie.img}}" alt="movie">
+    <figure class="movie-details-card movie-img">
+        <img class="movie-details-img" src="../../assets/images/movie-covers/{{movie.img}}" alt="movie">
 
     </figure>
-    <div class=" movie-details-info">
-        <h1 style="color: white; margin-top:100px;">{{movie.name}}</h1>
-        <p>
+    <div class="movie-details-info">
+        <h1>{{movie.name}}</h1>
+        <p class="left-aligned">
+            <span>Description:</span>
             {{movie.description}}
         </p>
-        <p>
+        <p class="left-aligned">
+            <span>Genres:</span>
             {{movie.genres}}
         </p>
-        <p>
+        <p class="left-aligned">
+            <span>Rating:</span>
             {{movie.rate}}
         </p>
-        <p>
+        <p class="left-aligned">
+            <span>Duration:</span>
             {{movie.length}}
         </p>
+        <button class="btn" routerLink="/movies">Back</button>
     </div>
 </div>
