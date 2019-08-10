@@ -1,11 +1,12 @@
 import { Component, OnInit } from "@angular/core";
-import { createSelector, Store, select } from "@ngrx/store";
+import { Store, select } from "@ngrx/store";
 
 import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { map, take } from "rxjs/operators";
 
-import { AppState } from "../state/reducers.js";
+import { AppState, getSearchQuery } from "../state/reducers.js";
 import { Movie } from "../movie-details/movie-detail.model.js";
+import { searchMovies } from "../state/actions.js";
 
 @Component({
   selector: "app-movies-list",
@@ -23,11 +24,10 @@ export class MoviesListComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.getMovies()
+    this.getMovies("");
   }
 
-  getMovies() {
-    // this.moviesService.getMovies()
-    //   .subscribe(movies => this.movies = movies)
+  getMovies(query: string) {
+    this.store.dispatch(searchMovies({ query }));
   }
 }
