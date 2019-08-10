@@ -3,4 +3,15 @@
     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVvpgKU0srM-1h612oMwzFJp9GVflz3G0qH4xxb2j-i-HXLPvE"
   />
   <input (keyup)="search($event)" type="text" placeholder="Quick Search..." />
+  <select
+    (change)="filter($event)"
+    name="genres"
+    id="genres"
+    class="genres-filter"
+  >
+    <option value=""></option>
+    <option *ngFor="let genre of genres" value="{{ genre[1] }}">{{
+      genre[0]
+    }}</option>
+  </select>
 </nav>

@@ -2,9 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import { Store, select } from "@ngrx/store";
 
 import { Observable } from "rxjs";
-import { map, take } from "rxjs/operators";
+import { map } from "rxjs/operators";
 
-import { AppState, getSearchQuery } from "../state/reducers.js";
+import { AppState } from "../state/reducers.js";
 import { Movie } from "../movie-details/movie-detail.model.js";
 import { searchMovies } from "../state/actions.js";
 
