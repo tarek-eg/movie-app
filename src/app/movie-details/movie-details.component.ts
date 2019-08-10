@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { MoviesService } from '../movies.service';
-import { MovieDetail } from './movie-detail.model';
+import { Movie } from './movie-detail.model';
 
 @Component({
   selector: 'app-movie-details',
@@ -11,7 +11,7 @@ import { MovieDetail } from './movie-detail.model';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  movie: MovieDetail
+  movie: Movie
 
   constructor( 
     private route: ActivatedRoute,
