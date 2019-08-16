@@ -15,7 +15,6 @@ export class MovieDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location,
     private moviesService: MoviesService
   ) {}
 
@@ -26,6 +25,5 @@ export class MovieDetailsComponent implements OnInit {
   getMovie() {
     const id = +this.route.snapshot.paramMap.get("id");
     this.moviesService.getMovie(id).subscribe(movie => (this.movie = movie));
-    console.log(this.movie);
   }
 }

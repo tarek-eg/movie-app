@@ -9,14 +9,12 @@ import { Movie } from "../movie-details/movie-detail.model";
 
 export interface AppState {
   movies: Movie[];
-  selectedMovie: Movie | null;
   query: string;
   genre: string;
 }
 
 const initialState: AppState = {
   movies: MOVIES,
-  selectedMovie: null,
   query: "",
   genre: ""
 };
@@ -31,7 +29,6 @@ function reducer(
       if (query === "") {
         return {
           ...state,
-          movies: MOVIES,
           query
         };
       }
@@ -49,7 +46,6 @@ function reducer(
       if (genre === "") {
         return {
           ...state,
-          movies: MOVIES,
           genre
         };
       }

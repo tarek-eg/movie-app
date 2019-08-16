@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 
 import { Store, select } from "@ngrx/store";
-import { AppState } from "../state/reducers";
 import { Observable } from "rxjs";
 import { take } from "rxjs/operators";
 
+import { AppState } from "../state/reducers";
 import { Movie, GenreType } from "../movie-details/movie-detail.model";
 import { searchMovies, filterMovies } from "../state/actions";
 
